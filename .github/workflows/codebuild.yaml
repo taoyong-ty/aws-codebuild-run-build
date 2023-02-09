@@ -8,12 +8,12 @@ jobs:
     name: CodeBuild Job
     steps:
       - name: Configure AWS Credentials
-        uses: taoyong-ty/configure-aws-credentials@v2
+        uses: aws-actions/configure-aws-credentials@v2
         with:
           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-west-2
       - name: Run CodeBuild
-        uses: aws-actions/aws-codebuild-run-build@v1
+        uses: taoyong-ty/aws-codebuild-run-build@v1
         with:
           project-name: aws-codebuild-run-build
