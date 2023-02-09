@@ -1,4 +1,4 @@
-name: '"Test CodeBuild'
+name: '"Test Test ty CB'
 description: 'Execute CodeBuild::startBuild for the current repo.'
 branding:
   icon: 'cloud'
