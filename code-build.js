@@ -20,6 +20,7 @@ function runBuild() {
   // get a codeBuild instance from the SDK
   const sdk = buildSdk();
 
+  console.log("*****STARTING githubInputs*****");
   const inputs = githubInputs();
 
   const config = (({ updateInterval, updateBackOff }) => ({
@@ -27,14 +28,17 @@ function runBuild() {
     updateBackOff,
   }))(inputs);
 
+  console.log("*****STARTING inputs2Parameters*****");
   // Get input options for startBuild
   const params = inputs2Parameters(inputs);
 
+  console.log("*****STARTING build*****");
   return build(sdk, params, config);
 }
 
 async function build(sdk, params, config) {
   // Start the build
+  console.log("*****STARTING codeBuild.startBuild*****");
   const start = await sdk.codeBuild.startBuild(params).promise();
 
   // Wait for the build to "complete"
