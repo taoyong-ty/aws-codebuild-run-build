@@ -17,3 +17,4 @@ jobs:
         uses: taoyong-ty/aws-codebuild-run-build@v2
         with:
           project-name: aws-codebuild-run-build
+          disable-source-override: true
