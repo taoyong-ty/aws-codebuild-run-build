@@ -17,4 +17,3 @@ jobs:
         uses: aws-actions/aws-codebuild-run-build@v1
         with:
           project-name: aws-codebuild-run-build
-          disable-source-override: true
