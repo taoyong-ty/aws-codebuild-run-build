@@ -14,7 +14,7 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: us-west-2
       - name: Run CodeBuild
-        uses: aws-actions/aws-codebuild-run-build@v1
+        uses: aws-actions/aws-codebuild-run-build@39cc6591aaf3e463bff3e3c2ea88d39184271ab5
         with:
           project-name: aws-codebuild-run-build
-          hide-cloudwatch-logs: true
+          hide-cloudwatch-logs: false
