@@ -162,6 +162,8 @@ async function waitForBuildEndTime(
   // CloudWatchLogs have line endings.
   // I trim and then log each line
   // to ensure that the line ending is OS specific.
+  console.log(new Date());
+  console.log(events.length);
   events.forEach(({ message }) => console.log(message.trimEnd()));
 
   // Stop after the build is ended and we've received two consecutive empty log responses
