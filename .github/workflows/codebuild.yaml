@@ -15,7 +15,7 @@ jobs:
           aws-region: us-west-2
       - name: Run CodeBuild
         id: codebuild
-        uses: taoyong-ty/aws-codebuild-run-build@40513095d9be6e7c464ba25b9ec1ba3a74a45354
+        uses: taoyong-ty/aws-codebuild-run-build@0f4ef0830d01e44c988aea8bce27afc858bb2855
         with:
           project-name: aws-codebuild-run-build
           buildspec-override:   |
