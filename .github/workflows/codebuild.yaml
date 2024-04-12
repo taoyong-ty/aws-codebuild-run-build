@@ -18,10 +18,10 @@ jobs:
         uses: taoyong-ty/aws-codebuild-run-build@0f4ef0830d01e44c988aea8bce27afc858bb2855
         with:
           project-name: aws-codebuild-run-build
+          update-interval: 5
           buildspec-override:   |
             version: 0.2
             phases:
               build:
                 commands:
                   - sleep 30
-          hide-cloudwatch-logs: false
